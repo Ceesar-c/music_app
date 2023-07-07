@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <swiper-container [initialSlide]="1" [slidesPerView] = "2">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <swiper-slide>
+      <h1>Titulo principal</h1>
+      <img src="assets/images/xdxdxd.jpg" alt="" srcset="">
+      <ion-icon class="slide-icon" name="game-controller-outline"></ion-icon>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nulla neque maxime nesciunt optio voluptates, vel odio alias quibusdam natus. Deleniti, repudiandae! Voluptatibus ab quo tenetur repellat repudiandae molestias! Tempora!</p>
+    </swiper-slide>
+
+    <swiper-slide>
+      <h2>Titulo secundario</h2>
+      <img src="assets/images/xdxdxd.jpg" alt="" srcset="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quisquam maxime voluptatibus illum mollitia consectetur provident quam. Iure, a ipsum quam alias illo voluptates fugiat consequuntur amet quae vitae asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quisquam maxime voluptatibus illum mollitia consectetur provident quam. Iure, a ipsum quam alias illo voluptates fugiat consequuntur amet quae vitae asperiores.</p>
+    </swiper-slide>
+    
+  </swiper-container>
 </ion-content>
