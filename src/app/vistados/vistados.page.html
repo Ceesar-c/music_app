@@ -1,0 +1,19 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content>
+
+  <ion-icon class="close-icon" name="close" (click) = "returnHome()"></ion-icon>
+
+  <swiper-container [initialSlide]="0" [slidesPerView] = "1">
+
+    <swiper-slide *ngFor = "let slide of slides">
+      <h1 class="my-favourite-text-color">{{slide.tittle}}</h1>
+      <img src={{slide.img}} alt="" srcset="">
+      <ion-icon class="slide-icon" name="{{slide.icon}}"></ion-icon>
+      <p>{{slide.description}}</p>
+    </swiper-slide>
+    
+  </swiper-container>
+</ion-content>

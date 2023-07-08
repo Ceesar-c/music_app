@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'vistados',
+    loadChildren: () => import('./vistados/vistados.module').then( m => m.VistadosPageModule)
+  },
 ];
 
 @NgModule({

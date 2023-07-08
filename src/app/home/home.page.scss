@@ -1,8 +1,38 @@
+swiper-slide{
+  background-color: var(--ion-swipe-color);
+  margin-top: 6px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
 .slide-icon{
   font-size: 30px;
-  color: red;
+  color: black;
 }
 
 .my-favourite-text-color{
-  color: #F39BEF;
+  color: #000;
+}
+
+img{
+  display: block;
+  margin: auto;
+}
+
+//******* Punto 1///
+//1.crear dos clases scss (tamaño letra, colores, tipografia)
+
+.image-text-description{
+  font-size: 15px;
+  font-family: fantasy;
+  text-align: center;
+  line-height: 20px;
+  color: #FA4236;
+}
+
+.image-tittle{
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  color: #bb8a8a;
 }
