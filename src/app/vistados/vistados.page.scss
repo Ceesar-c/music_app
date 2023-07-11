@@ -4,11 +4,18 @@ swiper-slide{
   
 .slide-icon{
     font-size: 30px;
-    color: black;
+    /*Punto 5*/
+    /*5.vamos usar al menos dos variables predeterminadas de ionic*/
+    /*Primer variable (1)*/
+    color: var(--ion-color-dark-contrast);
 }
   
 .my-favourite-text-color{
     color: #000;
+    /*Punto 5*/
+    /*5.vamos usar al menos dos variables predeterminadas de ionic*/
+    /*Tercer variable (3)*/
+    color: var(--ion-color-warning-tint) !important;
 }
   
 h1{
@@ -17,10 +24,26 @@ h1{
   
 p{
     font-size: var(--ion-font-size);
+    /*Punto 5*/
+    /*5.vamos usar al menos dos variables predeterminadas de ionic*/
+    /*Segunda variable (2)*/
+    color: var(--ion-color-tertiary);
 }
   
 ion-content{
+    /*4.Vamos usar las variables creadas por nosotros */
+    font-family: var(--ion-font-style);
+    letter-spacing: var(--ion-letter-space);
+    text-shadow: var(--ion-text-shadow);
     --background: #F39BEF;
+    /*6.Vamos a modificar dos custom properties de cualquier componente en nuestra aplicación*/
+    /*Primer costum properties (1)*/
+    --padding-bottom: 12px;
+    --padding-end: 12px;
+    --padding-start: 16px;
+    --padding-top: 16px;
+    /*Segunda costum properties (2)*/
+    --ion-font-family: fantasy;
 }
 
 .close-icon{
