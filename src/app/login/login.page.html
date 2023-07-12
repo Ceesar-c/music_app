@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!--Punto 1. Utilizar 3 clases de las utilidades de css en cualquier parte de mi código html -->
+      <!--Tercer clase de utilidades (3) ion-text-end-->
+    <ion-title class="ion-text-end">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="loginForm" action="">
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <!--Punto 1. Utilizar 3 clases de las utilidades de css en cualquier parte de mi código html -->
+      <!--Primer clase de utilidades (1) ion-text-uppercase-->
+      <ion-input class="ion-text-uppercase ion-padding-bottom" label="Email" labelPlacement="floating" formControlName="email" placeholder="example@example.com.co"></ion-input>
+    </ion-item>
+
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_message.email">
+        <div *ngIf="(
+          loginForm.get('email')?.hasError(validation.type) && 
+        loginForm.get('email')?.dirty
+        )">
+          {{validation.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <!--Punto 4. Hacer que el campo de password sea tipo password y no se vea la contraseña cuando la dígito-->
+      <!--Punto 1. Utilizar 3 clases de las utilidades de css en cualquier parte de mi código html -->
+      <!--Segunda clase de utilidades (2) ion-padding-bottom-->
+      <ion-input class="ion-text-uppercase ion-padding-bottom" label="Password" type="password" labelPlacement="floating" formControlName="password" placeholder="*********"></ion-input>
+    </ion-item>
+
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_message.password">
+        <div *ngIf="(
+          loginForm.get('password')?.hasError(validation.type) && 
+        loginForm.get('password')?.dirty
+        )">
+          {{validation.message}}
+        </div>
+      </ng-container>
+    </div>
+
+  </form>
+</ion-content>

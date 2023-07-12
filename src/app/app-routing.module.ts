@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'vistados',
     loadChildren: () => import('./vistados/vistados.module').then( m => m.VistadosPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({

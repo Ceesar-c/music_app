@@ -39,7 +39,7 @@ export class VistadosPage implements OnInit {
 
   returnHome() {
     this.router.navigateByUrl("/home");
-    this.storage.set("introShow", true);
+    this.storage.set("introShow", false);
   }
 
 }
