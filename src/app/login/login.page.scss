@@ -1,0 +1,47 @@
+.validation-errors{
+    margin-bottom: 6px;
+    font-family: 'Vesper Libre', serif;
+    font-size: 18px;
+}
+
+ion-input{
+    font-family: 'Vesper Libre', serif;
+    color: #92949c;
+    font-size: 18px;
+}
+
+ion-toolbar{
+    --background: transparent;
+}
+
+ion-title{
+    font-size: 24px;
+    font-family: 'Vesper Libre', serif;
+    --color: #748094;
+}
+
+.error-p{
+    background-color: #ffc409;
+    color: #fff;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+ion-item{
+    --background: transparent;
+    --border-radius: 16px;
+    --border-bottom: none;
+}
+
+.btn-text{
+    font-family: 'Vesper Libre', serif;
+    font-size: 16px;
+}
+
+ion-content{
+    --background: url(../../assets/images/loginbg.jpg) no-repeat center/cover fixed;
+}
