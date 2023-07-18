@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MusicService } from '../services/music.service';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  artists: any;
+  localArtists: any;
 
   /*slides = [
     {
@@ -30,6 +34,15 @@ export class HomePage {
     }
   ];*/
 
-  constructor() {}
+  constructor(private musicService: MusicService) {}
 
+  ionViewDidEnter (){
+    this.musicService.getArtists().then(listArtists =>{
+      this.artists = listArtists;
+      console.log(this.artists);
+    })
+
+    this.localArtists = this.musicService.getArtistsFromJson().artists;
+    console.log(this.localArtists.artists);
+  }
 }

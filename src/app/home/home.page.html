@@ -7,5 +7,32 @@
 </ion-header>
 
 <ion-content>
-  <p>Soy el Home</p>
+  <h1>Artistas</h1>
+  <swiper-container 
+  [initialSlide]="0"
+  [slidesPerView]="3"
+  *ngIf=" !!artists?.length"
+  >
+    <swiper-slide *ngFor="let artist of artists">
+      <ion-avatar>
+        <img src="{{artist.image}}" />
+        <span>{{artist.name}}</span>
+      </ion-avatar>
+    </swiper-slide>
+  </swiper-container>
+
+  <h1>Artistas (Locales)</h1>
+  <swiper-container 
+  [initialSlide]="0"
+  [slidesPerView]="3"
+  *ngIf=" !!localArtists?.length"
+  >
+    <swiper-slide *ngFor="let localArtist of localArtists">
+      <ion-avatar>
+        <img src="{{localArtist.images[1].url}}" />
+        <span>{{localArtist.name}}</span>
+      </ion-avatar>
+    </swiper-slide>
+  </swiper-container>
+  
 </ion-content>
