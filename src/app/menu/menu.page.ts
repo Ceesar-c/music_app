@@ -24,4 +24,8 @@ export class MenuPage implements OnInit {
     this.storage.set("isUserLoggedIn", false);
   }
 
+  returnIntro (){
+    this.navCtrl.navigateRoot("/vistados");
+  }
+
 }
