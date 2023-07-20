@@ -21,6 +21,20 @@
     </swiper-slide>
   </swiper-container>
 
+  <h1>Albumes</h1>
+  <swiper-container 
+  [initialSlide]="0"
+  [slidesPerView]="3"
+  *ngIf=" !!albumns?.length"
+  >
+    <swiper-slide *ngFor="let album of albumns">
+      <ion-avatar class="album-style" (click)="showAlbumSongs(album)">
+        <img src="{{album.image}}" />
+        <span>{{album.name}}</span>
+      </ion-avatar>
+    </swiper-slide>
+  </swiper-container>
+
   <h1>Artistas (Locales)</h1>
   <swiper-container 
   [initialSlide]="0"
@@ -49,16 +63,16 @@
   <ion-grid>
     <ion-row>
       <ion-col class="ion-text-start">
-        0:00
+        {{ parseTime(currentSong?.currentTime) || "0:00"}}
       </ion-col>
   
       <ion-col class="ion-text-end">
-        0:00
+        {{ parseTime(currentSong?.duration) || "0:00"}}
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-progress-bar [value]="0.5"></ion-progress-bar>
+  <ion-progress-bar [value]="newTime"></ion-progress-bar>
 
   <iob-grid>
     <ion-row>
@@ -69,7 +83,8 @@
         <ion-text>{{song.name || "Sin canción seleccionada"}}</ion-text>
       </ion-col>
       <ion-col>
-        <ion-icon size="1" name="play"></ion-icon>
+        <ion-icon name="play" (click)="play()" *ngIf="!song?.playing"></ion-icon>
+        <ion-icon name="pause" (click)="pause()" *ngIf="song?.playing"></ion-icon>
       </ion-col>
   </ion-row>
   </iob-grid>
