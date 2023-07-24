@@ -28,4 +28,14 @@ export class MenuPage implements OnInit {
     this.navCtrl.navigateRoot("/vistados");
   }
 
+  goToSettings (){
+    this.navCtrl.navigateForward("menu/settings");
+    this.menu.close();
+  }
+
+  goToHome (){
+    this.navCtrl.navigateRoot("/menu/home");
+    this.menu.close();
+  }
+
 }
