@@ -1,3 +1,8 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;600&family=Vesper+Libre&display=swap" rel="stylesheet">
+
+
 <ion-split-pane contentId="content">
   <ion-menu contentId="content" side="start">
     <ion-header>
@@ -11,28 +16,28 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-item (click)="goToSettings()">
+      <ion-item (click)="goToSettings()" class="style-item">
         <ion-icon name="settings"></ion-icon>
-        Configuración
+        <p class="ion-text-menu-page">Configuración</p>
       </ion-item>
 
-      <ion-item (click)="goToHome()">
+      <ion-item (click)="goToHome()" class="style-item">
         <ion-icon name="home"></ion-icon>
-        Inicio
+        <p class="ion-text-menu-page">Inicio</p>
       </ion-item>
-    </ion-content>
 
     <ion-footer>
-      <ion-item (click)="logOut()">
+      <ion-item (click)="logOut()" class="style-item">
         <ion-icon name="log-in-outline"></ion-icon>
-        <p>Cerrar sesión</p>
+        <p class="ion-text-menu-page">Cerrar sesión</p>
       </ion-item>
 
-      <ion-item (click)="returnIntro()">
+      <ion-item (click)="returnIntro()" class="style-item">
         <ion-icon name="arrow-back-outline"></ion-icon>
-        <p>Volver a Intro</p>
+        <p class="ion-text-menu-page">Volver a Intro</p>
       </ion-item>
     </ion-footer>
+  </ion-content>
 
   </ion-menu>
   <ion-router-outlet id="content" main></ion-router-outlet>

@@ -1,0 +1,32 @@
+ion-title{
+    font-family: 'Vesper Libre', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #3c4b4b;
+}
+
+ion-toolbar{
+    --background: linear-gradient(#eeeeed, #e2e2e2);
+}
+
+.style-item{
+    color: #7b5656;
+    --transition: 0.4s;
+}
+
+.style-item:hover{
+    --background: #C0C0C0;
+    cursor: pointer;
+}
+
+ion-content{
+    --background: url(../../assets/images/menubg.jpg) no-repeat center/cover fixed;
+}
+.ion-text-menu-page{
+    font-family: 'Vesper Libre', serif;
+    text-align: center;
+    margin-left: 7px;
+    margin-bottom: 7px;
+    font-size: 15px;
+    font-weight: 600;
+}

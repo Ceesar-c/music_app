@@ -1,5 +1,46 @@
+ion-toolbar{
+    --background: linear-gradient(#eeeeed, #e2e2e2);
+}
+
+ion-content{
+    font-family: 'Vesper Libre', serif;
+    --background: url(../../assets/images/settingsbg3.jpg) no-repeat center/cover fixed;
+}
+
+ion-title{
+    font-family: 'Vesper Libre', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #3c4b4b;
+}
+
+h1{
+    color: #7b5656;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h2{
+    color: #7b5656;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.col-numbers{
+    color: #7484b1;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.col-information{
+    color: #7484b1;
+    font-size: 17px;
+    font-weight: 600;
+}
+
 .center-avatar{
     margin: auto;
-    width: 100px;
-    height: 100px;
+    margin-top: 15px;
+    width: 65px;
+    height: 65px;
 }
