@@ -1,5 +1,20 @@
+ion-content{
+  text-align: center;
+  font-family: 'Vesper Libre', serif;
+}
+
+.txt-home{
+  font-size: 17px;
+  font-weight: 600;
+  color: #7e9696;
+}
+
+img{
+  margin: auto;
+}
+
 swiper-slide{
-  background-color: var(--ion-swipe-color);
+  //background-color: var(--ion-swipe-color);
   margin-top: 6px;
   margin-left: 4px;
   margin-right: 4px;
@@ -45,9 +60,27 @@ ion-avatar{
 swiper-slide{
   margin-left: auto;
   margin-right: auto;
-  height: 120px;
+  height: 140px;
 }
 
 .album-style{
   --border-radius: 4px;
+}
+
+ion-content{
+  --background: url(../../assets/images/settingsbg2.jpg) no-repeat center/cover fixed;
+}
+
+ion-toolbar{
+  --background: linear-gradient(#eeeeed, #e2e2e2);
+}
+
+ion-footer{
+  background: linear-gradient(#eeeee4, #e2e2e2);
+}
+
+.titles{
+  color: #144444;
+  font-size: 26px;
+  font-weight: 600;
 }

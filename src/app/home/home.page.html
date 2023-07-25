@@ -1,3 +1,7 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;600&family=Vesper+Libre&display=swap" rel="stylesheet">
+
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -7,7 +11,7 @@
 </ion-header>
 
 <ion-content>
-  <h1>Artistas</h1>
+  <h1 class="titles">Artistas</h1>
   <swiper-container 
   [initialSlide]="0"
   [slidesPerView]="3"
@@ -16,12 +20,12 @@
     <swiper-slide *ngFor="let artist of artists">
       <ion-avatar (click)="showSongs(artist)">
         <img src="{{artist.image}}" />
-        <span>{{artist.name}}</span>
+        <span class="txt-home">{{artist.name}}</span>
       </ion-avatar>
     </swiper-slide>
   </swiper-container>
 
-  <h1>Albumes</h1>
+  <h1 class="titles">Albumes</h1>
   <swiper-container 
   [initialSlide]="0"
   [slidesPerView]="3"
@@ -30,12 +34,12 @@
     <swiper-slide *ngFor="let album of albumns">
       <ion-avatar class="album-style" (click)="showAlbumSongs(album)">
         <img src="{{album.image}}" />
-        <span>{{album.name}}</span>
+        <span class="txt-home">{{album.name}}</span>
       </ion-avatar>
     </swiper-slide>
   </swiper-container>
 
-  <h1>Artistas (Locales)</h1>
+  <h1 class="titles">Artistas (Locales)</h1>
   <swiper-container 
   [initialSlide]="0"
   [slidesPerView]="3"
@@ -44,7 +48,7 @@
     <swiper-slide *ngFor="let localArtist of localArtists">
       <ion-avatar>
         <img src="{{localArtist.images[1].url}}" />
-        <span>{{localArtist.name}}</span>
+        <span class="txt-home">{{localArtist.name}}</span>
       </ion-avatar>
     </swiper-slide>
   </swiper-container>
@@ -80,7 +84,7 @@
         <ion-icon size="1" name="heart"></ion-icon>
       </ion-col>
       <ion-col size="10" class="ion-text-center">
-        <ion-text>{{song.name || "Sin canción seleccionada"}}</ion-text>
+        <ion-text class="txt-home">{{song.name || "Sin canción seleccionada"}}</ion-text>
       </ion-col>
       <ion-col>
         <ion-icon name="play" (click)="play()" *ngIf="!song?.playing"></ion-icon>
