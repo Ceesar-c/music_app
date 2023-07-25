@@ -25,7 +25,7 @@ export class RegisterPage implements OnInit {
       { type: "required", message: "¡El nombre es obligatorio!" }
     ],
     last_name: [
-      { type: "required", message: "¡La contraseña es obligatoria!" }
+      { type: "required", message: "¡La apellido es obligatorio!" }
     ]
   }
 
