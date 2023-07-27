@@ -2,32 +2,44 @@ import { Component, OnInit } from '@angular/core';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { UserService } from '../services/user.service';
+import { Storage } from '@ionic/storage-angular'
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.page.html',
   styleUrls: ['./settings.page.scss'],
 })
-export class SettingsPage implements OnInit {
+export class SettingsPage   {
   userImage = "assets/images/profilepic.png";
   photo: any;
-  constructor(private userService: UserService) { }
+  userInfo: any;
+  constructor(private userService: UserService, private storage: Storage) { }
 
-  ngOnInit() {
-    this.userService.getUser(1).then(userData => {
-      //TODO
+  ionViewDidEnter () {
+    this.userService.getUser().then(userData => {
+      console.log("userData", userData);
+      this.userInfo = userData;
+      this.photo = userData.image;
     })
   }
 
   async takePhoto (){
-    const image = await Camera.getPhoto({
-      quality: 100,
-      allowEditing: false,
-      resultType: CameraResultType.DataUrl,
-      source: CameraSource.Camera
-    });
-    this.photo = image.dataUrl;
-    console.log(image.dataUrl);
+    try {
+      const image = await Camera.getPhoto({
+        quality: 100,
+        allowEditing: false,
+        resultType: CameraResultType.DataUrl,
+        source: CameraSource.Camera
+      })
+      this.photo = image.dataUrl;
+      console.log(image.dataUrl);
+      this.userService.updateUser({"image": this.photo}).then((res: any) =>{
+        console.log(res.msg);
+      })
+    }catch(error){
+      console.log("No se realizo la foto")
+    }
+    
   }
 
 }
